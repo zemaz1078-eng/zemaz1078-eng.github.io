@@ -3,156 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peregrine Arch Studio | የንድፍና የዲጂታል ጥበብ ማዕከል</title>
+    <title>Peregrine Arch Studio | Elite Design & Digital Art Center</title>
     <style>
-        :root { --primary: #007bff; --dark: #111; --light: #f4f4f4; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: var(--dark); color: #fff; line-height: 1.6; }
-        header { background: rgba(17,17,17,0.9); padding: 20px; position: fixed; width: 100%; top:0; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
-        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-decoration: none; }
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
-        .hero { padding: 150px 20px 100px; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://unsplash.com') no-repeat center center/cover; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; color: #fff; }
-        .hero p { font-size: 1.3rem; color: #ccc; max-width: 800px; margin: 0 auto 30px; }
-        .btn { background: var(--primary); color: #fff; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
-        .btn:hover { background: #0056b3; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--primary); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-card { background: #222; padding: 30px; border-radius: 8px; border: 1px solid #333; transition: 0.3s; }
-        .service-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .service-card h3 { color: #fff; margin-top: 0; font-size: 1.5rem; border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
-        .service-card ul { padding-left: 20px; margin: 15px 0 0; }
-        .service-card li { margin-bottom: 8px; color: #ccc; }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-        .portfolio-item { background: #222; border-radius: 8px; overflow: hidden; border: 1px solid #333; text-align: center; }
-        .portfolio-item img { width: 100%; height: 220px; object-fit: cover; }
-        .portfolio-item p { padding: 15px; margin: 0; font-weight: bold; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: bold; color: #ccc; }
-        input, select, textarea { width: 100%; padding: 12px; background: #222; border: 1px solid #444; color: #fff; border-radius: 5px; box-sizing: border-box; }
-        input:focus, select:focus, textarea:focus { border-color: var(--primary); outline: none; }
-        form { background: #1a1a1a; padding: 40px; border-radius: 8px; border: 1px solid #333; max-width: 700px; margin: 0 auto; }
-        .contact-info { text-align: center; margin-top: 40px; font-size: 1.2rem; }
-        .contact-info a { color: var(--primary); text-decoration: none; font-weight: bold; margin: 0 10px; }
-        footer { background: #111; text-align: center; padding: 30px; border-top: 1px solid #333; color: #777; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2.3rem; } header { flex-direction: column; text-align: center; } nav { margin-top: 15px; } nav a { margin: 0 10px; } }
+        :root {
+            --primary: #00e5ff;
+            --primary-hover: #00b3cc;
+            --accent: #ffb300;
+            --bg-main: #0a0a0f;
+            --bg-card: #12121f;
+            --text-main: #f5f5fa;
+            --text-muted: #8fa0b5;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            overflow-x: hidden;
+            letter-spacing: 0.5px;
+        }
+
+        /* High-End Header Navigation */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 25px 6%;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 26px; font-weight: 800; color: #fff; text-decoration: none;
+            display: flex; align-items: center; gap: 12px; letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--primary); text-shadow: 0 0 15px rgba(0,229,255,0.4); }
+
+        nav a {
+            color: var(--text-main); text-decoration: none; margin-left: 35px;
+            font-weight: 600; font-size: 15px; transition: 0.3s ease;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        /* Full-Screen Ultra-Modern Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 0 20px;
+            background: linear-gradient(rgba(10,10,15,0.4), rgba(10,10,15,1)), url('https://unsplash.com') no-repeat center center/cover;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 5rem; font-weight: 900; line-height: 1.1; margin-bottom: 25px;
+            background: linear-gradient(45deg, #ffffff, #a5b4fc, var(--primary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem; color: var(--text-muted); max-width: 850px; margin-bottom: 45px;
+            line-height: 1.6; font-weight: 300;
+        }
+
+        .btn-group { display: flex; gap: 20px; }
+
+        .btn {
+            padding: 16px 40px; font-size: 16px; font-weight: 700; border-radius: 8px;
+            cursor: pointer; transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); text-decoration: none;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .btn-primary { background: var(--primary); color: #000; border: none; box-shadow: 0 8px 25px rgba(0,229,255,0.25); }
+        .btn-primary:hover { background: #fff; color: #000; transform: translateY(-4px); box-shadow: 0 12px 30px rgba(255,255,255,0.3); }
+
+        .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.15); }
+        .btn-outline:hover { border-color: var(--primary); background: rgba(0,229,255,0.03); transform: translateY(-4px); }
+
+        /* Premium Section Layout */
+        .wrapper { max-width: 1300px; margin: 0 auto; padding: 120px 20px; }
+        .section-head { text-align: center; margin-bottom: 80px; }
+        .section-head h2 { font-size: 3.2rem; font-weight: 800; color: #fff; margin-bottom: 15px; }
+        .section-head p { color: var(--primary); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; }
+
+        /* Advanced Services Grid Layout */
+        .services-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 35px; }
+        .card {
+            background: var(--bg-card); padding: 45px; border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.03); transition: 0.4s ease;
+            position: relative; overflow: hidden;
+        }
+        .card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--primary); transform: scaleY(0); transition: 0.3s ease;
+        }
+        .card:hover { transform: translateY(-8px); border-color: rgba(0,229,255,0.15); box-shadow: 0 25px 50px rgba(0,0,0,0.4); }
+        .card:hover::before { transform: scaleY(1); }
+        .icon-box { font-size: 45px; margin-bottom: 25px; }
+        .card h3 { font-size: 1.7rem; color: #fff; margin-bottom: 20px; font-weight: 700; }
+        .card ul { list-style: none; }
+        .card li { margin-bottom: 12px; color: var(--text-muted); font-size: 16px; position: relative; padding-left: 22px; }
+        .card li::before { content: '✦'; position: absolute; left: 0; color: var(--primary); }
+
+        /* Executive Masterpiece Profile Section */
+        .profile-section { background: #0e0e17; border-top: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .profile-flex { display: flex; align-items: center; gap: 60px; }
+        .profile-text { flex: 1; }
+        .profile-text h3 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
+        .profile-text h4 { font-size: 1.2rem; color: var(--primary); margin-bottom: 25px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .profile-text p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; }
+
+        /* Elite Portfolio Interface */
+        .showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; }
+        .showcase-card {
+            position: relative; border-radius: 16px; overflow: hidden; height: 320px;
+            cursor: pointer; box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        .showcase-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .showcase-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(10,10,15,0.95) 20%, rgba(10,10,15,0.4) 60%, transparent);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 35px; opacity: 0; transition: 0.4s ease; transform: translateY(10px);
+        }
+        .showcase-card:hover img { transform: scale(1.08); }
+        .showcase-card:hover .showcase-overlay { opacity: 1; transform: translateY(0); }
+        .showcase-overlay h4 { font-size: 1.6rem; color: #fff; margin-bottom: 5px; font-weight: 700; }
+        .showcase-overlay p { color: var(--primary); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Seamless Interactive Form Box */
+        form { background: var(--bg-card); padding: 55px; border-radius: 20px; max-width: 800px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.02); box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px; }
+        .field-group { margin-bottom: 30px; }
+        label { display: block; margin-bottom: 12px; font-size: 14px; font-weight: 600; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
+        input, select, textarea {
+            width: 100%; padding: 18px; background: rgba(5,5,10,0.5); border: 1px solid rgba(255,255,255,0.08);
+            color: #fff; border-radius: 8px; font-size: 16px; transition: 0.3s;
+        }
+        input:focus, select:focus, textarea:focus { border-color: var(--primary); background: rgba(0,0,0,0.6); outline: none; box-shadow: 0 0 15px rgba(0,229,255,0.1); }
+        
+        .footer-cta { text-align: center; margin-top: 60px; }
+        .footer-cta p { font-size: 1.4rem; font-weight: 300; margin-bottom: 25px; color: var(--text-muted); }
+        .footer-cta strong { color: #fff; font-size: 1.8rem; display: block; margin-top: 10px; }
+        .hub-links { display: flex; justify-content: center; gap: 25px; margin-top: 30px; }
+        .hub-links a { color: #000; text-decoration: none; font-weight: 700; background: var(--primary); padding: 12px 30px; border-radius: 6px; transition: 0.3s ease; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+        .hub-links a:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,255,255,0.15); }
+
+        footer { background: #050508; text-align: center; padding: 45px 20px; border-top: 1px solid rgba(255,255,255,0.03); color: #444955; font-size: 14px; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 900px) {
+            .profile-flex { flex-direction: column; text-align: center; gap: 30px; }
+            .hero h1 { font-size: 3.2rem; }
+            .input-row { grid-template-columns: 1fr; gap: 0; }
+            header { padding: 20px 4%; flex-direction: column; gap: 20px; }
+            nav a { margin: 0 12px; font-size: 13px; }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">🦅 Peregrine Arch Studio</a>
+        <a href="#" class="logo">🦅 Peregrine <span>Arch</span></a>
         <nav>
             <a href="#services">አገልግሎቶች</a>
-            <a href="#portfolio">የስራዎች ማሳያ</a>
-            <a href="#inquiry">የፕሮጀክት መጠየቂያ</a>
+            <a href="#studio-head">አርክቴክቱ</a>
+            <a href="#portfolio">ፖርትፎሊዮ</a>
+            <a href="#inquiry">ምክክር</a>
         </nav>
     </header>
 
     <section class="hero">
         <h1>Peregrine Arch Studio</h1>
-        <p>ህልምዎን ወደ እውነታ የሚቀይር የጥበብ ክንፍ! ፍጥነትን ከላቀ ጥራት ጋር አጣምረን የምናቀርብበት ልዩ ስቱዲዮ!</p>
-        <a href="#inquiry" class="btn">ቅጽ ይሙሉ / ያግኙን</a>
-    </section>
-
-    <div class="container" id="services">
-        <h2>የምናሰጣቸው ዋና ዋና አገልግሎቶች (Our Services)</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>📐 1. Architectural & Engineering</h3>
-                <ul>
-                    <li><strong>Architectural Design:</strong> ውብ እና ዘመናዊ የቤት ንድፎች (Plans & Elevations)</li>
-                    <li><strong>Structural Design:</strong> አስተማማኝ የኮንክሪትና ብረት ስትራክቸር ስራዎች</li>
-                    <li><strong>Electrical & Sanitary:</strong> ሙሉ የኤሌክትሪክ እና የሳኒተሪ ፕላን ዝግጅት</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3>🏡 2. 3D Design & Rendering</h3>
-                <ul>
-                    <li><strong>Interior Design:</strong> የሳሎን፣ የካፌ፣ የቢሮ እና የመኝታ ክፍል የውስጥ ውበት</li>
-                    <li><strong>Exterior Design:</strong> የህንፃዎ ውጫዊ ገጽታ ከመሬት አቀማመጥ (Landscape) ጋር</li>
-                    <li><strong>High-End 3D Rendering:</strong> ሳይሰራ በፊት ልክ እንደ እውነተኛ ፎቶ አድርጎ ማሳየት</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3>🎬 3. Video & Quantity Survey</h3>
-                <ul>
-                    <li><strong>Video & Motion:</strong> የፕሮሞሽን ቪዲዮዎች እና ማራኪ የሎጎ ኢንትሮዎች</li>
-                    <li><strong>BOQ & Survey:</strong> ዝርዝር የሰርቬይ እና የዋጋ ማውጫ (Bill of Quantities)</li>
-                    <li><strong>Quantity & Tender:</strong> የኳንቲቲ ስፔስፊኬሽን እና የቴንደር ሰነድ ዝግጅት</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" id="portfolio" style="background: #161616; max-width: 100%;">
-        <div style="max-width: 1100px; margin: 0 auto;">
-            <h2>የስራዎች ማሳያ (Portfolio)</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://unsplash.com" alt="Architectural Plan">
-                    <p>Architectural & Structural Designs</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://unsplash.com" alt="Interior Design">
-                    <p>Modern Interior 3D Rendering</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://unsplash.com" alt="Office Design">
-                    <p>BOQ, Specification & Tender Work</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" id="inquiry">
-        <h2>የፕሮጀክት መጠየቂያ እና ምክክር ቅጽ</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">ሙሉ ስም / የድርጅት ስም</label>
-                <input type="text" id="name" name="name" required placeholder="የእርስዎን ስም ያስገቡ">
-            </div>
-            <div class="form-group">
-                <label for="phone">ስልክ ቁጥር</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+251...">
-            </div>
-            <div class="form-group">
-                <label for="service">የሚፈልጉት የአገልግሎት አይነት</label>
-                <select id="service" name="service">
-                    <option value="architecture">Architectural & Engineering Design</option>
-                    <option value="3d-interior">Interior / Exterior 3D Rendering</option>
-                    <option value="boq-tender">BOQ, Quantity Specification & Tender</option>
-                    <option value="video-motion">Video Editing & Motion Graphics</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="budget">የፕሮጀክቱ ግምታዊ በጀት (ካለዎት)</label>
-                <input type="text" id="budget" name="budget" placeholder="ለምሳሌ፡ መካከለኛ፣ ከፍተኛ...">
-            </div>
-            <div class="form-group">
-                <label for="timeline">የጊዜ ሰሌዳ (የመጨረሻ ቀን)</label>
-                <input type="text" id="timeline" name="timeline" placeholder="ለምሳሌ፡ በ 2 ሳምንት ውስጥ...">
-            </div>
-            <div class="form-group">
-                <label for="message">ተጨማሪ ማብራሪያ ወይም የፕሮጀክቱ ዝርዝር (Specs)</label>
-                <textarea id="message" name="message" rows="5" placeholder="ስለ ፕሮጀክቱ ዝርዝር መረጃ እዚህ ይጻፉልን..."></textarea>
-            </div>
-            <button type="button" class="btn" style="width: 100%;" onclick="alert('ይህ የማሳያ ቅጽ ነው! በቀጣይ መልዕክት መቀበያ ማገናኘት እንችላለን።')">የፕሮጀክት ጥያቄን ላክ</button>
-        </form>
-
-        <div class="contact-info">
-            <p>📞 ስልክ: <strong>+251923333354</strong></p>
-            <p>💬 ሶሻል ሚዲያ፦ 
-                <a href="https://t.me" target="_blank">Telegram</a> | 
-                <a href="https://instagram.com" target="_blank">Instagram</a> | 
-                <a href="https://tiktok.com" target="_blank">TikTok</a>
-            </p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Peregrine Arch Studio. All Rights Reserved. Crafted with Passion.</p>
-    </footer>
-
-</body>
-</html>
+        <p>ህልምዎን ወደ እውነታ የሚቀይር የጥበብ ክንፍ! ፍጥነትን ከላቀ ጥራት ጋር አጣምረን የምናቀርብበት ልዩ የንድፍና የዲጂታል ጥበብ ማዕከል!</p>
+        <div class="btn-group">
